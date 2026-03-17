@@ -1,0 +1,160 @@
+$base-color : #253450;
+$border-color : white;
+
+
+window#menu {
+  .divider {
+    min-width: 1px;
+    background: $border-color;
+  }
+
+  .container {
+    padding: 10px;
+    background: #2534503d;
+    border-radius: 4px;
+    border-color: $border-color;
+    border: 2px solid rgba(100, 100, 100);
+  }
+
+  .buttons {
+    background: $base-color;
+    border-radius: 4px;
+    border: 2px solid rgba(100, 100, 100);
+    padding: 0 4px;
+    transition: border-color .3s;
+    min-width: 32px;
+
+    &:hover {
+      border-color: $border-color;
+    }
+
+    button {
+      border-radius: 50px;
+      margin: -3px -4px;
+      background: transparent;
+      border-color: transparent;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.251);
+        filter: brightness(1);
+      }
+    }
+  }
+
+  .iconsButton {
+    color: $border-color;
+    background: transparent;
+    margin: 6px 2px;
+    font-size: 20px;
+  }
+
+  .icons {
+    color: $border-color;
+    font-size: 16px;
+    margin: 4px;
+  }
+
+  .icon {
+    color: $border-color;
+    background: transparent;
+    margin: 7px 6px;
+    font-size: 20px;
+  }
+
+  #powerButton {
+    border-color: transparent;
+    color: $border-color;
+    background: transparent;
+    min-height: 1px;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.251);
+      filter: brightness(1);
+    }
+  }
+
+  .powerContainer {
+    background: $base-color;
+    border-radius: 4px;
+    border: 2px solid rgba(100, 100, 100);
+    transition: border-color .3s;
+
+    &:hover {
+      border-color: $border-color;
+    }
+
+    button {
+      border-radius: 3px;
+      margin: -3px -4px;
+      background: transparent;
+      border-color: transparent;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.251);
+        filter: brightness(1);
+      }
+    }
+  }
+
+  .powerButtonsText {
+    color: $border-color;
+    background: transparent;
+  }
+
+  #topBox {
+    min-height: 1px;
+    margin-bottom: -30px;
+  }
+
+  #mirror {
+    transform: scaleX(-1);
+    padding-left: 2px;
+  }
+
+  #bright {
+    margin-left: -1px;
+  }
+
+  .menubutton {
+    background: $base-color;
+    border-radius: 4px;
+    border: 2px solid rgba(100, 100, 100);
+    padding: 0;
+    transition: border-color .3s;
+    min-width: 0px;
+    min-height: 0px;
+
+    popover {
+      * {
+        color: $border-color;
+      }
+    }
+
+    &:hover {
+      border-color: $border-color;
+      background: #DAD6D2;
+
+      .iconsButton {
+        filter: brightness(0.5);
+      }
+    }
+
+    menubutton {
+      border-radius: 50px;
+      background: transparent;
+      border-color: transparent;
+    }
+  }
+
+  .powerContainer {
+    min-width: 250px;
+    min-height: 150px;
+  }
+}
+
+window#close {
+  .button {
+    background: transparent;
+    border: none;
+  }
+}
