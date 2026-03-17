@@ -23,7 +23,8 @@ export function WifiMenu() {
                 widthRequest={250}
                 heightRequest={150}
                 hscrollbarPolicy={2}
-                vscrollbarPolicy={2}>
+                vscrollbarPolicy={2}
+                maxContentHeight={160}>
                 <Wifi />
             </scrolledwindow>
 

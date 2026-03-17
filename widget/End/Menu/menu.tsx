@@ -10,6 +10,7 @@ import { Power } from "./powerWindow/power"
 import { Bat } from "../Battery/BatteryWidget"
 import { BatteryPercentage } from "../Battery/battery"
 import { WifiMenu } from "./wifiMenu/wifi"
+import Mpris from "gi://AstalMpris"
 
 const network = AstalNetwork.get_default()
 
