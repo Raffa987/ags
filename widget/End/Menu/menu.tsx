@@ -10,7 +10,8 @@ import { Power } from "./powerWindow/power"
 import { Bat } from "../Battery/BatteryWidget"
 import { BatteryPercentage } from "../Battery/battery"
 import { WifiMenu } from "./wifiMenu/wifi"
-import AstalMpris from "gi://AstalMpris?version=0.1"
+import { Media } from "./media/mediaPlayer"
+
 
 const network = AstalNetwork.get_default()
 
@@ -161,6 +162,7 @@ export function controlCenter(gdkmonitor: Gdk.Monitor) {
                     </button>
                 </box>
             </box>
+            <Media/>
         </box>
     </window>
 }
