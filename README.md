@@ -5,3 +5,5 @@ To add/fix:
   -auxs popover
   -buttons funcionality
   -Media player(reactivity)
+
+  fix README
