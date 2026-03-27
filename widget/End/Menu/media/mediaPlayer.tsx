@@ -1,8 +1,13 @@
 import AstalMpris from "gi://AstalMpris";
 import { Gtk } from "ags/gtk4";
 import Pango from "gi://Pango?version=1.0";
+import PangoCairo from "gi://PangoCairo?version=1.0";
+import { SpecialLabel } from "./Label";
+import { createBinding } from "gnim";
+import { For } from "gnim";
 
-export function Media() {
+
+/*export function Media() {
     const mpris = AstalMpris.get_default();
     const player = mpris.players[0];
     const cover = player ? player.coverArt : "";
@@ -11,15 +16,24 @@ export function Media() {
     print(player.artist)
     print(player.title)
 
-    return <box
+    return 
+}
+*/
+
+export function Media() {
+  const players = createBinding(AstalMpris.get_default(), "players")
+  return (
+    <For each={players}>
+      {(player) => (      
+        <box
         class={"media-wrapper"}
         orientation={Gtk.Orientation.VERTICAL}>
         <box orientation={Gtk.Orientation.HORIZONTAL}>
             <box hexpand={true}></box>
             <box
                 class={"cover"}
-                css={cover ? `
-                background-image: url('${coverUrl}');
+                css={player.coverArt ? `
+                background-image: url('file://${player.coverArt}');
                 background-size: cover;
                 background-position: center;
                 min-width: 128px; 
@@ -34,12 +48,11 @@ export function Media() {
             </box>
             <box hexpand={true}></box>
         </box>
-        <label
-            ellipsize={Pango.EllipsizeMode.END}
-            class={"analytics"}
-            label={`${player.title}\n${player.artist}`}
-            css={"color: white;"}
-            maxWidthChars={15}>
-        </label>
+
+        <SpecialLabel
+        player={player} />
     </box>
+      )}
+    </For>
+  )
 }

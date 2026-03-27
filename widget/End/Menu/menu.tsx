@@ -12,7 +12,6 @@ import { BatteryPercentage } from "../Battery/battery"
 import { WifiMenu } from "./wifiMenu/wifi"
 import { Media } from "./media/mediaPlayer"
 
-
 const network = AstalNetwork.get_default()
 
 function levelVolume() {
