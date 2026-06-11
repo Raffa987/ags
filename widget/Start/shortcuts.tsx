@@ -6,13 +6,13 @@ export function Apps() {
             <button hexpand={false}>
                 <label label={"\u{f003b}"} class={"icons"} />
             </button>
-            <button onClicked={() => execAsync("firefox & disown")} hexpand={false}>
+            <button onClicked={() => execAsync("firefox")} hexpand={false}>
                 <image iconName={"firefox"} pixelSize={14} />
             </button>
             <button onClicked={() => execAsync("code")} hexpand={false}>
                 <image iconName={"vscode"} pixelSize={14} />
             </button>
-            <button onClicked={() => execAsync("discord & disown")} hexpand={false}>
+            <button onClicked={() => execAsync("discord")} hexpand={false}>
                 <image iconName={"discord"} pixelSize={14} />
             </button>
         </box>
